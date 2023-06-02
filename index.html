@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>CRUD Básico</h1>
+    </header>
+
+    <main>
+        <div class="title">
+            <h2>Cadastre um novo produto.</h2>
+        </div>
+
+        <div class="card">
+            <div class="lineInput">
+                <label for="produto">Produto</label>
+                <input type="text" id="produto" placeholder="Nome do produto">
+            </div>
+
+            <div class="lineInput">
+                <label for="valor">Valor</label>
+                <input type="text" id="valor" placeholder="Valor do produto">
+            </div>
+
+            <button id="add">Adiconar</button>
+        </div>
+
+        <div class="content">
+            <h3>Lista de produto</h3>
+            <table border="1">
+                <thead>
+                    <th>Id</th>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Notebook</td>
+                        <td>2500</td>
+                        <td>
+                            <img src="./img/editar.png" alt="">
+                            <img src="./img/deletar.png" alt="">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
