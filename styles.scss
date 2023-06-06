@@ -1,0 +1,137 @@
+//variaveis
+
+$colorHeading: #1f3a78;
+$colorBody: #fafbfc;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+
+    input,
+    button {
+        font-family: 'Nunito Sans', sans-serif;
+    }
+}
+
+
+body {
+    background-color: $colorBody;
+
+    header {
+        background-color: $colorHeading;
+        padding: 10px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    main {
+        padding: 30px 50px;
+    }
+}
+
+button {
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    
+
+    &.btn-add {
+        width: 100%;
+        height: 40px;
+        border-radius: 3px;
+    }
+
+    &.btn-close {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        background-color: transparent;
+    }
+
+    &.btn-open-modal {
+        background-color: $colorHeading;
+        color: #fff;
+        width: 180px;
+        height: 40px;
+        font-size: 16px;
+        border-radius: 3px;
+    }
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgba(0,0,0,0.5);
+    overflow: auto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    &__content {
+        width: 500px;
+        background-color: $colorBody;
+        border-radius: 5px;
+        position: relative;
+
+        &-heading {
+            background-color: $colorHeading;
+            margin-bottom: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            h3 {
+                color: #fff;
+                text-align: center;
+                padding: 10px 0;
+            }
+        }
+
+        &-input {
+            padding: 0 10px;
+            margin-bottom: 10px;
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                outline: none;
+            }
+        }
+
+        &-action {
+            padding: 10px;
+        }
+    }
+}
+
+.content {
+    margin-top: 20px;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+        text-align: center;
+
+        th {
+            background-color: #ccc;
+        }
+    }
+}
+

@@ -8,8 +8,9 @@ const produtoCRUD = {
 
     items: [],
 
-    adicionarProduto: function(name, value){
+    adicionarProduto: function(ean, name, value){
         const item = {
+            ean: ean,
             nome: name,
             valor: value
         }
@@ -44,8 +45,9 @@ const produtoCRUD = {
 }
 
 add.addEventListener('click', function(){
+    const ean = newProduto.value
     const product = newProduto.value
     const value = newValue.value
-    produtoCRUD.adicionarProduto(product, value)
+    produtoCRUD.adicionarProduto(ean, product, value)
 })
 

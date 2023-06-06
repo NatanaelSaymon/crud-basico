@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+* input,
+* button {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  background-color: #fafbfc;
+}
+body header {
+  background-color: #1f3a78;
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+body main {
+  padding: 30px 50px;
+}
+
+button {
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+button.btn-add {
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+}
+button.btn-close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: transparent;
+}
+button.btn-open-modal {
+  background-color: #1f3a78;
+  color: #fff;
+  width: 180px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.modal__content {
+  width: 500px;
+  background-color: #fafbfc;
+  border-radius: 5px;
+  position: relative;
+}
+.modal__content-heading {
+  background-color: #1f3a78;
+  margin-bottom: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.modal__content-heading h3 {
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+.modal__content-input {
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.modal__content-input label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.modal__content-input input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+}
+.modal__content-action {
+  padding: 10px;
+}
+
+.content {
+  margin-top: 20px;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.content table th {
+  background-color: #ccc;
+}/*# sourceMappingURL=styles.css.map */

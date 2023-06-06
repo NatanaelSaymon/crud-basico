@@ -9,38 +9,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Loja</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>CRUD Básico</h1>
+        <h1>Cadastro de Produto</h1>
     </header>
 
     <main>
-        <div class="title">
-            <h2>Cadastre um novo produto.</h2>
-        </div>
+        <button class="btn-open-modal" id="open-modal">
+            Cadastrar Produto
+        </button>
 
-        <div class="card">
-            <div class="lineInput">
-                <label for="produto">Produto</label>
-                <input type="text" id="produto" placeholder="Nome do produto">
+        <div class="modal" id="modal">
+            <div class="modal__content">
+                <button class="btn-close" id="btn-close">
+                    <img src="./img/cancel.png" alt="fechar">
+                </button>
+
+                <div class="modal__content-heading">
+                    <h3>Novo Produto</h3>
+                </div>
+
+                <div class="modal__content-input">
+                    <label for="ean">EAN</label>
+                    <input type="text" id="ean" placeholder="Código do produto">
+                </div>
+
+                <div class="modal__content-input">
+                    <label for="produto">Produto</label>
+                    <input type="text" id="produto" placeholder="Nome do produto">
+                </div>
+
+                <div class="modal__content-input">
+                    <label for="valor">Valor</label>
+                    <input type="text" id="valor" placeholder="Valor do produto">
+                </div>
+
+                <div class="modal__content-action">
+                    <button id="btn-add" class="btn-add">Salvar</button>
+                </div>
             </div>
-
-            <div class="lineInput">
-                <label for="valor">Valor</label>
-                <input type="text" id="valor" placeholder="Valor do produto">
-            </div>
-
-            <button id="add">Adiconar</button>
         </div>
 
         <div class="content">
-            <h3>Lista de produto</h3>
             <table border="1">
                 <thead>
-                    <th>Id</th>
+                    <th>EAN</th>
                     <th>Produto</th>
                     <th>Valor</th>
                     <th>Ações</th>
