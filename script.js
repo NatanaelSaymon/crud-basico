@@ -11,6 +11,32 @@ function crud() {
     closeModal.addEventListener('click', function(){
         modal.classList.remove('is-active')
     })
+
+    const tempProduct = {
+        id: '1',
+        name: 'RTX 3080',
+        price: '4000'
+    }
+
+    function updatePrudct(index, product){
+        const db_product = JSON.parse(localStorage.getItem('db_product'))
+        db_product[index] = product
+        localStorage.setItem('db_product', JSON.stringify(db_product))
+    }
+
+    function readyProduct(){
+        const dados = JSON.parse(localStorage.getItem('db_product'))
+        console.log(dados)
+    }
+
+    function createProduct(product){
+        const db_product = JSON.parse(localStorage.getItem('db_product')) ?? []
+        db_product.push(product)
+        localStorage.setItem('db_product', JSON.stringify(db_product))
+    }
+
+    createProduct(tempProduct)
+    readyProduct()
 }
 
 crud()
