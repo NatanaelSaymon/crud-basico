@@ -18,7 +18,13 @@ function crud() {
         price: '4000'
     }
 
-    function updatePrudct(index, product){
+    function deleteProduct(index) {
+        const db_product = readyProduct()
+        db_product.splice(index, 1)
+        localStorage.setItem('db_product', JSON.stringify(db_product))
+    }
+
+    function updateProduct(index, product){
         const db_product = JSON.parse(localStorage.getItem('db_product'))
         db_product[index] = product
         localStorage.setItem('db_product', JSON.stringify(db_product))
