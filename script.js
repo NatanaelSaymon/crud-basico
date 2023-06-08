@@ -1,21 +1,21 @@
 function crud() {
 
+    //elementos
     const modal = document.querySelector('#modal');
     const openModal = document.querySelector('#open-modal');
     const closeModal = document.querySelector('#btn-close');
+    const btn_add = document.querySelector("#btn-add")
+    const productId = document.querySelector("#id")
+    const productName = document.querySelector("#produto")
+    const productPrice = document.querySelector("#valor")
 
-    openModal.addEventListener('click', function(){
+
+    function open_modal() {
         modal.classList.add('is-active')
-    })
+    }
 
-    closeModal.addEventListener('click', function(){
+    function close_modal(){
         modal.classList.remove('is-active')
-    })
-
-    const tempProduct = {
-        id: '1',
-        name: 'RTX 3080',
-        price: '4000'
     }
 
     function deleteProduct(index) {
@@ -41,8 +41,24 @@ function crud() {
         localStorage.setItem('db_product', JSON.stringify(db_product))
     }
 
-    createProduct(tempProduct)
-    readyProduct()
+    function saveProduct() {
+        const id = productId.value;
+        const product = productName.value;
+        const price = productPrice.value;
+
+        const item = {
+            id: id,
+            product: product,
+            price: price
+        }
+
+        createProduct(item)
+    }
+
+    //eventos
+    openModal.addEventListener('click', open_modal)
+    closeModal.addEventListener('click', close_modal)
+    btn_add.addEventListener('click', saveProduct)
 }
 
 crud()
