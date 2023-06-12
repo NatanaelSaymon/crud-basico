@@ -32,6 +32,13 @@ button.btn-add {
   height: 40px;
   border-radius: 3px;
 }
+button.btn-add--edit {
+  display: none;
+  width: 100%;
+  height: 40px;
+  background-color: #3bc420;
+  border-radius: 3px;
+}
 button.btn-close {
   position: absolute;
   top: -5px;
@@ -44,6 +51,18 @@ button.btn-open-modal {
   width: 180px;
   height: 40px;
   font-size: 16px;
+  border-radius: 3px;
+}
+button.btn-edit {
+  width: 50px;
+  height: 32px;
+  background-color: #3bc420;
+  border-radius: 3px;
+}
+button.btn-delete {
+  width: 50px;
+  height: 32px;
+  background-color: #ff0000;
   border-radius: 3px;
 }
 
