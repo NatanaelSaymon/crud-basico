@@ -32,24 +32,29 @@
                     <h3>Novo Produto</h3>
                 </div>
 
-                <div class="modal__content-input">
-                    <label for="id">Id</label>
-                    <input type="text" id="id" placeholder="Id do produto">
-                </div>
+                <form id="form" class="modal__form">
+                    <input type="text" id="index" data-index="new" style="display: none;">
 
-                <div class="modal__content-input">
-                    <label for="produto">Produto</label>
-                    <input type="text" id="produto" placeholder="Nome do produto">
-                </div>
-
-                <div class="modal__content-input">
-                    <label for="valor">Valor</label>
-                    <input type="text" id="valor" placeholder="Valor do produto">
-                </div>
-
-                <div class="modal__content-action">
-                    <button id="btn-add" class="btn-add">Salvar</button>
-                </div>
+                    <div class="modal__content-input">
+                        <label for="id">Id</label>
+                        <input type="text" id="id" class="field" placeholder="Id do produto" required>
+                    </div>
+    
+                    <div class="modal__content-input">
+                        <label for="produto">Produto</label>
+                        <input type="text" id="produto" class="field" placeholder="Nome do produto" required>
+                    </div>
+    
+                    <div class="modal__content-input">
+                        <label for="valor">Valor</label>
+                        <input type="text" id="valor" class="field" placeholder="Valor do produto" required>
+                    </div>
+    
+                    <div class="modal__content-action">
+                        <button id="btn-add" class="btn-add">Salvar</button>
+                        <!-- <button id="btn-add--edit" class="btn-add--edit">Editar</button> -->
+                    </div>
+                </form>
             </div>
         </div>
 
